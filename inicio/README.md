@@ -306,7 +306,7 @@ O componente “Resultado” recebe o estado interno do componente “Botao”. 
 }
 ```
 
-Como “this.state.dados”, do componente “Botao”, agora contém os resultados recebidos do “fetch()”, então será diferente de “null”, logo, o tag “<Resultado>” será renderizado. E ele recebe um argumento “dados”, que conterá o JSON que recebemos. 
+Como “this.state.dados”, do componente “Botao”, agora contém os resultados recebidos do “fetch()”, então será diferente de “null”, logo, o tag “```<Resultado>```” será renderizado. E ele recebe um argumento “dados”, que conterá o JSON que recebemos. 
 
 No construtor do componente “Resultado” ele pega o argumento recebido e armazena em seu próprio estado interno: 
 
