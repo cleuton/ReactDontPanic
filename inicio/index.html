@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React! Don't panic!</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+      class Resultado extends React.Component {
+              constructor(props) {
+                super(props);
+                this.state = {'dados' : props.dados}
+              }
+
+              render() {
+                return (
+                  <table border='1'>
+                    <tbody>
+                      <tr><td>IP</td><td>{this.state.dados.ip}</td></tr>
+                      <tr><td>Hostname</td><td>{this.state.dados.hostname}</td></tr>
+                      <tr><td>Cidade</td><td>{this.state.dados.city}</td></tr>
+                      <tr><td>Regi&atilde;o</td><td>{this.state.dados.region}</td></tr>
+                      <tr><td>Pa&iacute;s</td><td>{this.state.dados.country}</td></tr>
+                      <tr><td>Loc</td><td>{this.state.dados.loc}</td></tr>
+                      <tr><td>Organiza&ccedil;&atilde;o</td><td>{this.state.dados.org}</td></tr>
+                    </tbody>
+                  </table>
+                )
+              }
+      }
+      
+
+      class Botao extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {'dados' : props.resultado};
+          // This binding is necessary to make `this` work in the callback
+          this.handleClick = this.handleClick.bind(this);
+        }
+
+        handleClick() {
+
+          fetch('http://ipinfo.io/json'
+          )
+            .then(response => response.json())
+            .then(rjson => {
+              this.setState({'dados':rjson})
+            })
+
+        }
+
+        render() {
+          return (
+            <div>
+              <button onClick={this.handleClick}>
+                Pesquisar
+              </button>
+              {this.state.dados != null &&
+                <Resultado dados={this.state.dados} />
+              }
+              <hr/> 
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <Botao resultado={null} />,
+        document.getElementById('root')
+      );    
+    </script>
+  </body>
+</html>
