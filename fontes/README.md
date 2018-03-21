@@ -30,11 +30,11 @@ Agora, dê uma olhada na aplicação e examine sua estrutura. Abra a pasta "src"
 
 O “create-react-app” criou uma aplicação completa, que utiliza o ciclo de desenvolvimento gerido pelo “npm”. Podemos executar as fases deste ciclo de vida com os comandos: 
 
-    • Desenvolver (npm start): Executa a aplicação em modo de desenvolvimento, utilizando um servidor web NodeJS. Se os arquivos forem alterados, a página é automaticamente recarregada, para desenvolvimento interativo;
+• **Desenvolver** (```npm start```): Executa a aplicação em modo de desenvolvimento, utilizando um servidor web NodeJS. Se os arquivos forem alterados, a página é automaticamente recarregada, para desenvolvimento interativo;
       
-    • Testar (npm test): Dispara um componente NodeJS chamado “Jest”, que executa sua aplicação dentro do NodeJS e não em um Navegador. Com isto, os scripts de teste podem ser executados;
+• **Testar** (```npm test```): Dispara um componente NodeJS chamado “Jest”, que executa sua aplicação dentro do NodeJS e não em um Navegador. Com isto, os scripts de teste podem ser executados;
       
-    • Preparar para a Produção (npm run build): Prepara uma versão da aplicação para ser instalada em ambiente de produção, criando uma pasta “buid”. A aplicação é compilada e os arquivos minificados, otimizados para carga rápida.
+• **Preparar para a Produção** (```npm run build```): Prepara uma versão da aplicação para ser instalada em ambiente de produção, criando uma pasta “buid”. A aplicação é compilada e os arquivos minificados, otimizados para carga rápida.
 
 
 ### Ok, mas o que eu faço agora?
