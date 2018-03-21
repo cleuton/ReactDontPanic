@@ -47,13 +47,13 @@ Olhe como nossa app ficará:
 
 O trabalho é muito simples: 
 
-    1. Separamos os dois componentes em arquivos JS: “Botao.js” e “Resultado.js”, colocando-os na pasta “src” do projeto React gerado;
-    2. Dentro do arquivo “src/App.js”, inserimos a renderização do componente principal, o “Botao”;
-    3. Dentro do arquivo “src/App.js”, importamos a classe “Botao”;
-    4. Dentro do arquivo “src/Botao.js”, importamos a classe “Resultado”;
-    5. Escrevemos casos de teste;
-    6. Testamos;
-    7. Fazemos o “build” final.
+1. Separamos os dois componentes em arquivos JS: “Botao.js” e “Resultado.js”, colocando-os na pasta “src” do projeto React gerado;
+2. Dentro do arquivo “src/App.js”, inserimos a renderização do componente principal, o “Botao”;
+3. Dentro do arquivo “src/App.js”, importamos a classe “Botao”;
+4. Dentro do arquivo “src/Botao.js”, importamos a classe “Resultado”;
+5. Escrevemos casos de teste;
+6. Testamos;
+7. Fazemos o “build” final.
 
 Dentro do meu repositório no Github (https://github.com/cleuton/ReactDontPanic) há uma pasta “fontes” com os arquivos JS modificados. É só baixar e copiar para a pasta “src” do seu projeto gerado pelo “create-react-app”.
 
