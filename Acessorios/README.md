@@ -31,5 +31,16 @@ Entendeu? Não? Dê uma olhada nessa figura, que é bem mais simples:
 4 - As **Stores** atualizam o estado;
 5 - As **Views** refletem o novo estado (*).
 
-As Views detectam a mudança e obtém o novo estado. 
+As Views detectam a mudança e obtém o novo estado. Na verdade, existe um tipo de componente, o **Container**, que atualiza o estado das views filhas, a cada mudança de estado das **Stores**.
 
+## REDUX
+
+O **Flux** e o [**Redux**](https://redux.js.org) funcionam de maneira muito semelhante, implementando uma forma derivada de MVC no React. As diferenças são poucas, sendo que o **Flux** é um design pattern e uma biblioteca de classes e utilitários, e o **Redux** é um componente.
+
+## Exemplo
+
+Há um exemplo simples de aplicação **Flux** que você pode acessar para ver como funciona: 
+
+https://github.com/facebook/flux/tree/master/examples/flux-todomvc
+
+Em breve, mostrarei mais acessórios e um exemplo funcional com o **Flux**
