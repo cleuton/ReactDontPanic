@@ -25,11 +25,11 @@ Entendeu? Não? Dê uma olhada nessa figura, que é bem mais simples:
 
 ![](./flux-simple-f8-diagram-with-client-action-1300w.png)
 
-1 - O usuário digita um campo em um form e tecla <ENTER>;
-2 - A **View** envia uma **Action** para o **Dispatcher**;
-3 - O **Dispatcher** envia a **Action** para as **Stores**;
-4 - As **Stores** atualizam o estado;
-5 - As **Views** refletem o novo estado (*).
+1. O usuário digita um campo em um form e tecla <ENTER>;
+2. A **View** envia uma **Action** para o **Dispatcher**;
+3. O **Dispatcher** envia a **Action** para as **Stores**;
+4. As **Stores** atualizam o estado;
+5. As **Views** refletem o novo estado (*).
 
 As Views detectam a mudança e obtém o novo estado. Na verdade, existe um tipo de componente, o **Container**, que atualiza o estado das views filhas, a cada mudança de estado das **Stores**.
 
@@ -41,6 +41,6 @@ O **Flux** e o [**Redux**](https://redux.js.org) funcionam de maneira muito seme
 
 Há um exemplo simples de aplicação **Flux** que você pode acessar para ver como funciona: 
 
-https://github.com/facebook/flux/tree/master/examples/flux-todomvc
+[https://github.com/facebook/flux/tree/master/examples/flux-todomvc](https://github.com/facebook/flux/tree/master/examples/flux-todomvc)
 
 Em breve, mostrarei mais acessórios e um exemplo funcional com o **Flux**
