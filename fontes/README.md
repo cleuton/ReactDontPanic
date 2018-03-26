@@ -236,6 +236,18 @@ import Adapter from 'enzyme-adapter-react-16';
 import { configure } from 'enzyme';
 import { expect } from 'chai';
 
+beforeEach(function() {
+  global.fetch = jest.fn().mockImplementation(()=> {
+        var p = new Promise((resolve,reject) => {
+          const response = function() {return {"ip": "192.168.1.1","hostname": "No Hostname","city": "Rio de Janeiro","region": "Rio de Janeiro","country": "BR","loc": "-22.9876,-43.3207","org": "VIVO"}; }
+          resolve({'json':response});
+        })
+        return p;
+      }
+    )
+  
+})
+
 describe('Teste da interface', () => {
   it('deve aparecer o botão Pesquisar, sem erros', () => {
     // Sem enzyme: 
@@ -247,7 +259,7 @@ describe('Teste da interface', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
   
-  it('Ao ser clicado, deve retornar uma tabela', () =>{
+  it('Ao ser clicado, deve retornar uma tabela',  () =>{
     // com enzyme:
     configure({ adapter: new Adapter() });
     const wrapper = mount(
@@ -255,7 +267,11 @@ describe('Teste da interface', () => {
     );
     const botao = wrapper.find('button');
     botao.simulate('click');
-    expect(wrapper.find('table')).to.have.length(1);
+    setTimeout(function(){
+      expect(wrapper.find('table')).to.have.length(1);
+    }, 2000);
+  
+    
   });
 });
 ```
@@ -285,6 +301,12 @@ Depois, é só verificar se foi gerada uma “```<table>```” dentro do nosso C
 ```
 expect(wrapper.find('table')).to.have.length(1);
 ```
+Você deve ter notado o "beforeEach()", não? Eu tive que incluir isso... É como o JUnit, é executado antes de cada teste. Por quê? Porque quando eu clico no botão, eu faço um "fetch()" para o site. E isso vai falhar no teste! 
+
+Ao "mockar" o "fetch" eu consigo executar testes verdeiramente unitários. Nesta parte, eu estou mocando o comportamento da função global "fetch" retornando um JSON simulado (na verdade, eu retorno um objeto que contém uma função "toJson()", para ficar igual ao que o "fetch" verdadeiro retornaria).
+
+E tive que incluir um "setTimeout()" no código de teste, para rodar o "mock" antes de testar a resposta. 
+
 Se você deixar executando o “npm test”, qualquer alteração será imediatamente detectada e os testes serão reexecutados.
 
 Nesse exemplo, estamos fazendo o request GET a cada teste. Podemos “mockar” o componente, simulando o request, o que torna o teste efetivamente unitário. 
