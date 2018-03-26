@@ -8,6 +8,18 @@ import Adapter from 'enzyme-adapter-react-16';
 import { configure } from 'enzyme';
 import { expect } from 'chai';
 
+beforeEach(function() {
+  global.fetch = jest.fn().mockImplementation(()=> {
+        var p = new Promise((resolve,reject) => {
+          const response = function() {return {"ip": "192.168.1.1","hostname": "No Hostname","city": "Rio de Janeiro","region": "Rio de Janeiro","country": "BR","loc": "-22.9876,-43.3207","org": "VIVO"}; }
+          resolve({'json':response});
+        })
+        return p;
+      }
+    )
+  
+})
+
 describe('Teste da interface', () => {
   it('deve aparecer o botão Pesquisar, sem erros', () => {
     // Sem enzyme: 
@@ -19,7 +31,7 @@ describe('Teste da interface', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
   
-  it('Ao ser clicado, deve retornar uma tabela', () =>{
+  it('Ao ser clicado, deve retornar uma tabela',  () =>{
     // com enzyme:
     configure({ adapter: new Adapter() });
     const wrapper = mount(
@@ -27,6 +39,10 @@ describe('Teste da interface', () => {
     );
     const botao = wrapper.find('button');
     botao.simulate('click');
-    expect(wrapper.find('table')).to.have.length(1);
+    setTimeout(function(){
+      expect(wrapper.find('table')).to.have.length(1);
+    }, 2000);
+  
+    
   });
 });
