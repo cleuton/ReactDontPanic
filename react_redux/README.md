@@ -20,7 +20,7 @@ Bom, pode ser meio complicado de entender... Redux é uma implementação do pad
 
 O Redux foi inspirado pelo padrão arquitetural do Flux, e segue alguns de seus preceitos, como o controle centralizado de estado, mas, ao contrário do Flux, o Redux prega que os "**reducers**" sejam funções "**puras**" e que não modifiquem o estado, apenas gerem um novo objeto.
 
-O Redux pode ser utilizado com outras bibliotecas Javascript, como [**Angular**] (https://github.com/angular-redux/store) ou [**Ember**](http://www.ember-redux.com/).
+O Redux pode ser utilizado com outras bibliotecas Javascript, como [**Angular**](https://github.com/angular-redux/store) ou [**Ember**](http://www.ember-redux.com/).
 
 ## Mas eu usaria Redux para quê?
 
