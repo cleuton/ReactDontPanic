@@ -1,6 +1,8 @@
 ![](./react.png)
 # React! Don't Panic!
 
+[![](./banner_livros2.png)](https://www.lcm.com.br/site/#livros/busca?term=cleuton)
+
 A non-nonsense tutorial about [**React Library**](https://reactjs.org).
 
 - Strike one: [**OMG !**](./inicio/);
