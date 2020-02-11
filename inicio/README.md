@@ -1,6 +1,8 @@
 ![](../react.png)
 # React! Don't Panic!
 
+[![](../banner_livros2.png)](https://www.lcm.com.br/site/#livros/busca?term=cleuton)
+
 ## Strike one: OMG!
 
 Conforme prometido, esse é o primeiro tutorial de desenvolvimento Web com a biblioteca React, criada pelo Facebook.
