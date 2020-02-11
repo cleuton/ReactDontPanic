@@ -1,7 +1,7 @@
 ![](./react.png)
 # React! Don't Panic!
 
-[![](./banner_livros2.png)](https://www.lcm.com.br/site/#livros/busca?term=cleuton)
+[![](../banner_livros2.png)](https://www.lcm.com.br/site/#livros/busca?term=cleuton)
 
 ![](./redux.png)
 
