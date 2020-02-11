@@ -1,6 +1,8 @@
 ![](../react.png)
 # React! Don't Panic!
 
+[![](../banner_livros2.png)](https://www.lcm.com.br/site/#livros/busca?term=cleuton)
+
 ## Strike two: Trabalho de "gente grande"
 
 Ok, no nosso primeiro tutorial, vimos o “jeitão” do React e criamos uma app “maneirinha”, certo? Mas como criar um projeto de verdade? Sim, com um ciclo de desenvolvimento completo: Desenvolvimento, Teste e Exportação para Produção?
