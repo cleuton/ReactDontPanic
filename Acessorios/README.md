@@ -1,6 +1,8 @@
 ![](../react.png)
 # React! Don't Panic!
 
+[![](../banner_livros2.png)](https://www.lcm.com.br/site/#livros/busca?term=cleuton)
+
 ## Strike three: Má notícia nunca vem sozinha...
 
 É, meus amigos, a moda agora é criar frameworks Javascript. Isso é bom e ruim... É bom porque nos dá uma grande variedade de componentes e bibliotecas para usarmos em nossos projetos, e a maioria delas é open source. E é ruim porque são mais "roadmaps" para gerenciar! Sim, não raro, uma biblioteca é atualizada e quebra a compatibilidade com as outras, gerando uma grande dor de cabeça.
