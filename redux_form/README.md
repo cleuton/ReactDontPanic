@@ -2,6 +2,8 @@
 # React! Don't Panic!
 (c) 2018 [**Cleuton Sampaio**](https://github.com/cleuton).
 
+[![](../banner_livros2.png)](https://www.lcm.com.br/site/#livros/busca?term=cleuton)
+
 ![](./rf.png)
 
 ## Strike five: Formulários com Redux-form!
